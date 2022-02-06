@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <nav>
+            <h1>2048</h1>
+            <div class="score">
+                <div class="now">
+                    <span class="label">SCORE</span>
+                    <span class="score-value" id="score">0</span>
+                </div>
+                <div class="best">
+                    <span class="label">BEST</span>
+                    <span class="score-value">0</span>
+                </div>
+            </div>
+        </nav>
+        <div class="desc">
+            <p>移动方块，获得2048吧</p>
+            <button class="button1"@click="reset">New game</button>
+            <!-- <button>last step</button> -->
+        </div>
+        <main>
+            <div class="grid" id="grid">
+                <div class="row">
+                    <div class="cell" id="cell-00">{{a00}}</div>
+                    <div class="cell" id="cell-01">{{a01}}</div>
+                    <div class="cell" id="cell-02">{{a02}}</div>
+                    <div class="cell" id="cell-03">{{a03}}</div>
+                </div>
+                <div class="row">
+                    <div class="cell" id="cell-10">{{a10}}</div>
+                    <div class="cell" id="cell-11">{{a11}}</div>
+                    <div class="cell" id="cell-12">{{a12}}</div>
+                    <div class="cell" id="cell-13">{{a13}}</div>
+                </div>
+                <div class="row">
+                    <div class="cell" id="cell-20">{{a20}}</div>
+                    <div class="cell" id="cell-21">{{a21}}</div>
+                    <div class="cell" id="cell-22">{{a22}}</div>
+                    <div class="cell" id="cell-23">{{a23}}</div>
+                </div>
+                <div class="row">
+                    <div class="cell" id="cell-30">{{a30}}</div>
+                    <div class="cell" id="cell-31">{{a31}}</div>
+                    <div class="cell" id="cell-32">{{a32}}</div>
+                    <div class="cell" id="cell-33">{{a33}}</div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="up-button">
+                <button @click="move(0)">up</button>
+            </div>
+            <div class="lrd-button">
+                <div class="left-button">
+                    <button @click="move(2)">left</button>
+                </div>
+                <div class="down-button">
+                    <button @click="move(1)">down</button>
+                </div>
+                <div class="right-button">
+                    <button @click="move(3)">right</button>
+                </div>
+            </div>
+            <p>HZ制作</p>
+        </footer>
+        <div class="mask" id="gameover">
+            <div class="content">Game Over!</div>
+            <div class="content">Your score:{{this.counta}}</div>
+            <button class="button1"@click="reset">Play Again</button>
+        </div>
+    </div>
+    <script src="./js/tile.js"></script>
+    <script src="./js/manager.js"></script>
+
+    
+</body>
+</html>

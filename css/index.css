@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 静态背景效果 */
+.container{
+    position: relative;
+    width: 375px;
+    height: 667px;
+    position: fixed;
+    background-color: #faf8ef;/*这个位置可以让用户换色*/
+}
+.score{
+    display: flex;
+    
+}
+.score>div{
+        width: 68px;
+        height:68px;
+        margin-left: 10px;
+        border-radius: 6px;
+        background-color: #bbada0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+.score .label{
+    font-size: 15px;
+    font-weight: bold;
+    color: #eee4d9;
+}
+.score .value{
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+nav{
+    height: 68px;
+    padding: 30px 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    margin: 0;
+    font-size: 34px;
+    font-weight: 700px;
+    color: #635545;
+}
+.desc{
+    display: flex;
+    padding: 0 42px;
+    align-items: center;
+}
+.desc>p{
+    font-size: 15px;
+    color: #635545;
+    flex: 1;
+}
+.button1{
+    width: 98px;
+    height: 44px;
+    border-radius: 4px;
+    background-color: #8f7a66;
+    font-size: 16px;
+    color: #fff;
+    line-height: 44px;
+    text-align: center;
+    font-weight: 700;
+    font-family: arial-black;
+}
+main{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    width: 280px;
+    height: 290px;
+    position: relative;
+    padding: 10px;
+    background-color: #bbada0;
+    border-radius: 8px;
+}
+main .grid{
+    width: 270px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+}
+main .row{
+    margin-bottom: 10px;
+    display: flex;
+    height: 60px;
+    
+}
+main .row .cell{
+    width: 60px;
+    height: 60px;
+    /* background-color: rgba(238, 228, 218, 0.35); */
+    float: left;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.mask{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.mask .content{
+    font-size: 26px;
+    color: #8f7a67;
+    text-align: center;
+}
+footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+footer>span{
+    margin-left: 16px;
+    font-size: 14px;
+    color: #8f7a67;
+    font-weight: 500;
+}
+footer button{
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    background-color: #8f7a66;
+    font-size: 14px;
+    color: #fff;
+    line-height: 44px;
+    text-align: center;
+    font-weight: 700;
+    font-family: arial-black;
+}
+.up-button{
+    width: 60px;
+    height: 60px;
+}
+.lrd-button{
+    width: 200px;
+    height: 60px;
+}
+.left-button{
+    width: 60px;
+    float: left;
+}
+.right-button{
+    width: 60px;
+    float: right;
+}
+.down-button{
+    width: 60px;
+    float: left;
+    margin-left: 10px;
+}
+footer p{
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* 动态模块的颜色 */
+.cell{
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 34px;
+    color: #776e65;
+    background-color: rgba(238, 238, 238, 0.35);
+}
+.tile-0{
+    background-color: rgba(238, 238, 238, 0.35);
+    animation: pop1 150ms;
+}
+.tile-2{
+    background-color: #eee4da;
+    animation: pop 250ms;
+}
+.tile-4{
+    background-color: #ede0c8;
+    animation: pop 250ms;
+}
+.tile-8{
+    background-color: #f2b179;
+    color: #f9f6f2;
+    animation: pop 250ms;
+}
+.tile-16{
+    background-color: #f59563;
+    color: #f9f6f2;
+    animation: pop 250ms;
+}
+.tile-32{
+    background-color: #f67c5f;
+    color: #f9f6f2;
+    animation: pop 250ms;
+}
+.tile-64{
+    background-color: #f65e3b;
+    color: #f9f6f2;
+    animation: pop 250ms;
+}
+.tile-128{
+    background-color: #edcf72;
+    color: #f9f6f2;
+    font-size: 30px;
+    animation: pop 250ms;
+}
+.tile-256{
+    background-color: #edcc61;
+    color: #f9f6f2;
+    font-size: 30px;
+    animation: pop 250ms;
+}
+.tile-512{
+    background-color: #edc850;
+    color: #f9f6f2;
+    font-size: 30px;
+    animation: pop 250ms;
+}
+.tile-1024{
+    background-color: #edc53f;
+    color: #f9f6f2;
+    font-size: 22px;
+    animation: pop 250ms;
+}
+.tile-2048{
+    background-color: #edc22e;
+    color: #f9f6f2;
+    font-size: 22px;
+    animation: pop 250ms;
+}
+.moveup{
+    animation: up 500ms;
+    z-index: 50;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+}
+@keyframes pop{
+    0%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+@keyframes pop1{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+@keyframes up{
+    0%{
+        /* background-color: #eee4da; */
+        transform: translateY(0px);
+        transform: scale(1.05);
+    }
+    100%{
+        transform: translateY(-70px);
+        transform: scale(1);
+        /* background-color: #776e65; */
+    }
+}
+.movedown{
+    animation: down 500ms;
+    z-index: 50;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+}
+@keyframes down{
+    0%{
+        /* background-color: #eee4da; */
+        transform: translateY(0px);
+        transform: scale(1.05);
+    }
+    100%{
+        transform: translateY(70px);
+        transform: scale(1);
+        /* background-color: #776e65; */
+    }
+}
+.moveleft{
+    animation: leftt 500ms;
+    z-index: 50;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+}
+@keyframes leftt{
+    0%{
+        /* background-color: #eee4da; */
+        transform: translateX(0px);
+        transform: scale(1.05);
+    }
+    100%{
+        transform: translateX(-70px);
+        transform: scale(1);
+        /* background-color: #776e65; */
+    }
+}
+.moveright{
+    animation: rightt 500ms;
+    z-index: 50;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+}
+@keyframes rightt{
+    0%{
+        /* background-color: #eee4da; */
+        transform: translateX(0px);
+        transform: scale(1.05);
+    }
+    100%{
+        transform: translateX(70px);
+        transform: scale(1);
+        /* background-color: #776e65; */
+    }
+}
